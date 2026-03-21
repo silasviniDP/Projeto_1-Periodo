@@ -48,7 +48,34 @@ int main(){
             }
 
             /*Mapa dos assentos da sessão*/
+
+        int assentos[6][6] = {
+            {0, 0, 1, 1, 0, 1}, /*fileira A*/
+            {0, 1, 1, 1, 0, 0}, /*fileira B*/
+            {1, 1, 0, 0, 1, 0}, /*fileira C*/
+            {1, 1, 1, 0, 0, 0}, /*fileira D*/
+            {0, 0, 0, 1, 0, 0}, /*fileira E*/
+            {0, 0, 0, 0, 0, 0}  /*fileira F*/
+        };
+
+            char fileiras[6] = {'A', 'B', 'C', 'D', 'E', 'F'};
+
+            printf("\n===== Assentos da Sessão =====\n");
+            printf("\n 1 2 3 4 5 6\n");
             
+            for (int i = 0; i < 6; i++) {
+                printf("%c  ", fileiras[i]);
+                    for (int j = 0; j < 6; j++) {
+                        if (assentos[i][j] == 0)
+                            printf("[ O ]");
+                        else
+                            printf("[ X ]");
+                        }
+                printf("\n");
+        }
+
+        printf("\nO = Disponivel   X = Ocupado\n");
+
             break; 
         }
         
